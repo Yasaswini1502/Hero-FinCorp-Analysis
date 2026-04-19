@@ -332,6 +332,8 @@ legal_rec.plot(kind="bar", ax=axes[1], color="green")
 axes[1].set_title("Recovery Rate by Legal Action")
 axes[1].set_ylabel("Recovery Rate (%)")
 
+print("\nNote: Branch-level recovery analysis not performed due to lack of direct mapping between loans and branches in the dataset.")
+
 plt.tight_layout()
 plt.savefig("task7_recovery.png")
 plt.close()
