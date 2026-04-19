@@ -463,6 +463,10 @@ purpose_time = apps_clean.groupby("Loan_Purpose")["Processing_Days"].mean().sort
 print("\nAvg Days by Loan Purpose:")
 print(purpose_time.round(2))
 
+status_time = apps_clean.groupby("Approval_Status")["Processing_Days"].mean()
+print("\nAvg Processing Days by Status:")
+print(status_time.round(2))
+
 fig, axes = plt.subplots(1, 2, figsize=(13, 5))
 axes[0].hist(apps_clean["Processing_Days"].dropna(), bins=40, color="steelblue", edgecolor="white")
 axes[0].set_title("Distribution of Processing Days")
