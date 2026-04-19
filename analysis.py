@@ -371,6 +371,16 @@ plt.tight_layout()
 plt.savefig("task8_emi.png")
 plt.close()
 
+# EMI distribution histogram
+plt.figure(figsize=(6,4))
+plt.hist(emi_df["EMI_Amount"], bins=30)
+plt.title("EMI Amount Distribution")
+plt.xlabel("EMI Amount")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.savefig("task8_distribution.png")
+plt.close()
+
 print("Task 8 done")
 
 
